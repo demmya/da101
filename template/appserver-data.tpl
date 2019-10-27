@@ -9,14 +9,9 @@ sudo yum update -y
 sudo yum -y install java-1.8.0-openjdk-devel.x86_64
 
 
-## install terraform
-sudo groupadd tomcat
-sudo mkdir /opt/tomcat
-sudo useradd -s /bin/nologin -g tomcat -d /opt/tomcat tomcat
-
-cd ~
-wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.0.33/bin/apache-tomcat-8.0.33.tar.gz
-sudo tar -zxvf apache-tomcat-8.0.33.tar.gz -C /opt/tomcat --strip-components=1
+## install tomcat
+sudo yum install tomcat-webapps.noarch -y
+service tomcat.service start
 
 
 ## install nodejs
