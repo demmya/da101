@@ -1,14 +1,24 @@
 pipeline {
     agent any
-    stages{
+    stages {
+
         stage ("perform terraform initilisation")
-        steps{
+        {
+             steps{
                 sh 'terraform init'
         }
 
+        }
+        
         stage ("apply terraform ")
-        steps{
+        {
+            steps{
                 sh 'terraform apply --auto-approve'
         }
-    }    
+
+
+        }
+        
+    }
+    
 }
