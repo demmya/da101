@@ -11,7 +11,7 @@ resource "aws_instance" "AppServerBox" {
   user_data                   = "${data.template_file.appserver-data.rendered}"
   #subnet_id                   = "${aws_subnet.public[0]}"
   subnet_id              = "${var.subnet_id}"
-  vpc_security_group_ids = "${var.vpc_security_group_ids}"
+  vpc_security_group_ids = "sg-05ef7fe37202b8188"
 
   tags = {
     Name = "AppServerBox"
