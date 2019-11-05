@@ -18,9 +18,9 @@ resource "aws_instance" "AppServerBox" {
   }
 }
 
-resource "aws_security_group" "appserver_allow" {
-  security_group_id  = "${var.security_group_id}"
-  description = "Allow all inbound traffic"
-  vpc_id      = "${var.vpc_id}"
-}
+#resource "aws_security_group" "appserver_allow" {
+  #security_group_id  = "${var.security_group_id}"
+  #description = "Allow all inbound traffic"
+  #vpc_id      = "${var.vpc_id}"
+#}
 
