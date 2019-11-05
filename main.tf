@@ -20,6 +20,6 @@ resource "aws_instance" "AppServerBox" {
 
 resource "aws_security_group" "appserver_allow" {
   vpc_id      = "${var.vpc_id}"
-  security_group_id = "sg-05ef7fe37202b8188"
+   #security_group_id = "sg-05ef7fe37202b8188"
 }
 
