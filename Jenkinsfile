@@ -43,12 +43,18 @@ pipeline {
 
         }
 
-        stage ("Deploy code to Appserver")
+
+         stage ("Deploy code to Appserver")
         {
-             steps{
-                sh 'scp -i devops-2.pem codebase/target/SampleServerlet.war  ec2-user@63.35.179.51:/var/lib/tomcat/webapps/'
-                echo 'DEPLOYED'
+            steps {
+                withCredentials([file(credentialsId: 'devops-2', variable: 'sec_file')]) 
+                {
+                   sh 'scp -i $sec_file codebase/target/SampleServerlet.war  ec2-user@63.35.179.51:/var/lib/tomcat/webapps/'
+                    echo 'DEPLOYED' 
+    
+                }
             }
+
 
         }
  
