@@ -49,7 +49,7 @@ pipeline {
             steps {
                 withCredentials([file(credentialsId: 'devops-2', variable: 'sec_file')]) 
                 {
-                   sh 'scp -i $sec_file codebase/target/SampleServerlet.war  ec2-user@63.35.179.51:/var/lib/tomcat/webapps/'
+                   sh 'scp -i $sec_file codebase/target/SampleServerlet.war  ec2-user@34.254.174.146:/var/lib/tomcat/webapps/'
                     echo 'DEPLOYED' 
     
                 }
