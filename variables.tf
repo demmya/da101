@@ -1,7 +1,7 @@
 variable "vpc_id" {
   default = "vpc-0232e87b16a405ad4"
 }
-variable "security_group_id" {
+variable "vpc_security_group_ids" {
   default = "sg-05ef7fe37202b8188"
 }
 variable "subnet_id" {
