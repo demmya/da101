@@ -29,7 +29,7 @@ pipeline {
         stage ("pulldown liquor codebase")
         {
              steps{
-                sh 'git clone https://github.com/demmya/LiquorStoreServlet.git codebase'
+                # sh 'git clone https://github.com/demmya/LiquorStoreServlet.git codebase'
             }
 
         }
