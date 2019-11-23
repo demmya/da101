@@ -12,14 +12,10 @@ resource "aws_instance" "AppServerBox" {
   #subnet_id                  = "${aws_subnet.public[0]}"
   subnet_id                    = "${var.subnet_id}"
   vpc_security_group_ids = ["${aws_security_group.appserver_allow.id}"]
+  #security_group_id = "${var.subnet_id}"
 
   tags = {
     Name = "AppServerBox"
   }
-}
-
-resource "aws_security_group" "appserver_allow" {
-  vpc_id      = "${var.vpc_id}"
-   #security_group_id = "sg-05ef7fe37202b8188"
 }
 
